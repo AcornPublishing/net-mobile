@@ -1,0 +1,769 @@
+VERSION 5.00
+Object = "{25C953A7-5464-11D1-A714-00AA0044064C}#1.0#0"; "MSCEFILE.DLL"
+Begin VB.Form Form1 
+   Appearance      =   0  'Flat
+   BackColor       =   &H80000005&
+   Caption         =   "SQL Server CE Demo"
+   ClientHeight    =   7470
+   ClientLeft      =   60
+   ClientTop       =   840
+   ClientWidth     =   10935
+   ForeColor       =   &H80000008&
+   ScaleHeight     =   498
+   ScaleMode       =   3  'Pixel
+   ScaleWidth      =   729
+   ShowOK          =   -1  'True
+   Begin VBCE.Frame frCustomer 
+      Height          =   3375
+      Left            =   150
+      TabIndex        =   2
+      Top             =   150
+      Width           =   3300
+      _cx             =   5821
+      _cy             =   5953
+      BackColor       =   -2147483647
+      BorderStyle     =   1
+      Caption         =   "Customer"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      ClipControls    =   -1  'True
+      Begin VBCE.ComboBox Combo1 
+         Height          =   300
+         Left            =   480
+         TabIndex        =   4
+         Top             =   480
+         Width           =   2295
+         List            =   "Form1.frx":0000
+         ItemData        =   "Form1.frx":0028
+         _cx             =   4048
+         _cy             =   529
+         BackColor       =   -2147483643
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   "Combo1"
+         IntegralHeight  =   -1  'True
+         Locked          =   0   'False
+         Sorted          =   0   'False
+         Style           =   2
+      End
+      Begin VBCE.CommandButton btnSelect 
+         Height          =   375
+         Left            =   1080
+         TabIndex        =   3
+         Top             =   1800
+         Width           =   975
+         _cx             =   1720
+         _cy             =   661
+         BackColor       =   12632256
+         Caption         =   "Select"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Style           =   0
+      End
+   End
+   Begin VBCE.Frame frMenu 
+      Height          =   3375
+      Left            =   150
+      TabIndex        =   0
+      Top             =   150
+      Width           =   3300
+      _cx             =   5821
+      _cy             =   5953
+      BackColor       =   -2147483647
+      BorderStyle     =   1
+      Caption         =   "Fetch Remote Data"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      ClipControls    =   -1  'True
+      Begin VBCE.TextBox Text10 
+         Height          =   195
+         Left            =   120
+         TabIndex        =   18
+         Top             =   1725
+         Width           =   1695
+         _cx             =   2990
+         _cy             =   353
+         BackColor       =   -2147483647
+         BorderStyle     =   0
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483643
+         Text            =   "SQL Password:"
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.TextBox Text9 
+         Height          =   195
+         Left            =   120
+         TabIndex        =   17
+         Top             =   1245
+         Width           =   1455
+         _cx             =   2566
+         _cy             =   344
+         BackColor       =   -2147483647
+         BorderStyle     =   0
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483643
+         Text            =   "SQL Login Name:"
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.TextBox Text8 
+         Height          =   195
+         Left            =   120
+         TabIndex        =   16
+         Top             =   765
+         Width           =   1215
+         _cx             =   2143
+         _cy             =   344
+         BackColor       =   -2147483647
+         BorderStyle     =   0
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483643
+         Text            =   "Web Server:"
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.Label Label2 
+         Height          =   195
+         Left            =   120
+         TabIndex        =   15
+         Top             =   285
+         Width           =   1215
+         _cx             =   2143
+         _cy             =   353
+         AutoSize        =   0   'False
+         BackColor       =   -2147483647
+         BackStyle       =   1
+         BorderStyle     =   0
+         Caption         =   "SQL Server:"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483643
+         Alignment       =   0
+         UseMnemonic     =   -1  'True
+         WordWrap        =   0   'False
+      End
+      Begin VBCE.TextBox Text7 
+         Height          =   255
+         Left            =   120
+         TabIndex        =   14
+         Top             =   1920
+         Width           =   3015
+         _cx             =   5318
+         _cy             =   450
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   ""
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.TextBox Text6 
+         Height          =   255
+         Left            =   120
+         TabIndex        =   13
+         Top             =   1440
+         Width           =   3015
+         _cx             =   5318
+         _cy             =   450
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   "sa"
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.TextBox Text5 
+         Height          =   255
+         Left            =   120
+         TabIndex        =   12
+         Top             =   960
+         Width           =   3015
+         _cx             =   5318
+         _cy             =   450
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   "http://p450/Northwind/SSCESA10.DLL"
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.TextBox Text4 
+         Height          =   255
+         Left            =   120
+         TabIndex        =   11
+         Top             =   480
+         Width           =   3015
+         _cx             =   5318
+         _cy             =   450
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   "p450"
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.CommandButton btnPullData 
+         Height          =   375
+         Left            =   720
+         TabIndex        =   1
+         Top             =   2640
+         Width           =   1695
+         _cx             =   2990
+         _cy             =   661
+         BackColor       =   12632256
+         Caption         =   "Pull Data"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Style           =   0
+      End
+   End
+   Begin FILECTLCtl.FileSystem FileSystem1 
+      Left            =   105
+      Top             =   3615
+      _cx             =   2200
+      _cy             =   1400
+   End
+   Begin VBCE.Frame frDetail 
+      Height          =   3375
+      Left            =   150
+      TabIndex        =   5
+      Top             =   150
+      Width           =   3300
+      _cx             =   5821
+      _cy             =   5953
+      BackColor       =   -2147483647
+      BorderStyle     =   1
+      Caption         =   "Detail"
+      Enabled         =   -1  'True
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Tahoma"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   -2147483640
+      ClipControls    =   -1  'True
+      Begin VBCE.TextBox Text3 
+         Height          =   255
+         Left            =   240
+         TabIndex        =   10
+         Top             =   1440
+         Width           =   2655
+         _cx             =   4683
+         _cy             =   450
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   "Text3"
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.TextBox Text2 
+         Height          =   255
+         Left            =   240
+         TabIndex        =   9
+         Top             =   1080
+         Width           =   2655
+         _cx             =   4683
+         _cy             =   450
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   "Text2"
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.TextBox Text1 
+         Height          =   255
+         Left            =   240
+         TabIndex        =   8
+         Top             =   720
+         Width           =   2655
+         _cx             =   4683
+         _cy             =   450
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Text            =   "Text1"
+         Alignment       =   0
+         HideSelection   =   -1  'True
+         Locked          =   0   'False
+         MaxLength       =   0
+         MultiLine       =   0   'False
+         PasswordChar    =   ""
+         ScrollBars      =   0
+      End
+      Begin VBCE.Label Label1 
+         Height          =   200
+         Left            =   240
+         TabIndex        =   7
+         Top             =   360
+         Width           =   2655
+         _cx             =   4683
+         _cy             =   353
+         AutoSize        =   0   'False
+         BackColor       =   -2147483643
+         BackStyle       =   1
+         BorderStyle     =   0
+         Caption         =   "Label1"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   -2147483640
+         Alignment       =   0
+         UseMnemonic     =   -1  'True
+         WordWrap        =   0   'False
+      End
+      Begin VBCE.CommandButton btnDone 
+         Height          =   375
+         Left            =   720
+         TabIndex        =   6
+         Top             =   2280
+         Width           =   1695
+         _cx             =   2990
+         _cy             =   661
+         BackColor       =   12632256
+         Caption         =   "Done"
+         Enabled         =   -1  'True
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Style           =   0
+      End
+   End
+End
+Attribute VB_Name = "Form1"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+' Demonstration Code for Pulling Data
+' From a SQL Server 2000 database
+' Into a SQL Server CE Edition database
+
+
+Public FlagChanged As Boolean
+Public DataProvider As String
+Public FileDir As String
+Public LocalCEDatabase  As String
+Public PathandFile As String
+Public ChosenItem As String
+Public SQLSrvr As String
+Public SQLCatalog As String
+Public URL As String
+Public SQLUserID As String
+Public SQLPwd As String
+Public SQLServerConn As String
+Public rda As SSCE.RemoteDataAccess
+Public ado As ADOCE.Connection
+Public TRACKINGON As Integer
+Public TRACKINGOFF As Integer
+DataProvider = "Provider=Microsoft.SQLSERVER.OLEDB.CE.1.0; data source="
+FileDir = "\My Documents\"
+SQLCatalog = "Provider=sqloledb;Initial Catalog=Northwind;"
+LocalCEDatabase = "nwindce.sdf"
+TRACKINGON = 1
+TRACKINGOFF = 0
+
+Private Sub Form_Load()
+SQLSrvr = Trim(Form1.Text4.Text)
+URL = Trim(Form1.Text5.Text)
+SQLUserID = Trim(Form1.Text6.Text)
+SQLPwd = Trim(Form1.Text7.Text)
+frMenu.Visible = True
+frCustomer.Visible = False
+PathandFile = FileDir & LocalCEDatabase
+SQLServerConn = SQLCatalog & "Data Source=" & SQLSrvr & ";UID=" & SQLUserID & ";password=" & SQLPwd
+Form1.Show
+Call PrepareDatabase
+End Sub
+
+Private Sub Command1_Click()
+frCustomer.Visible = False
+frMenu.Visible = True
+End Sub
+
+Private Sub Form_OKClick()
+App.End
+End Sub
+Private Sub btnDone_Click()
+frDetail.Visible = False
+frCustomer.Visible = True
+End Sub
+
+Private Sub btnSelect_Click()
+ChosenItem = Combo1.Text
+If ChosenItem <> "" Then
+  frCustomer.Visible = False
+  Call FillTextBoxes _
+  ("SELECT CompanyName,Address,City,Phone FROM locCustomers where companyname='" & Replace(ChosenItem, "'", "''") & "'")
+  frDetail.Visible = True
+End If
+End Sub
+
+Private Sub btnPullData_Click()
+Screen.MousePointer = 11
+Call OpenConn
+If TableInDB(ado, "locCustomers") = True Then
+  ado.Execute ("drop table locCustomers")
+End If
+Call CloseConn
+Call PullData("locCustomers", _
+  "SELECT CustomerID,CompanyName,Address,City,Phone FROM Customers", "locErrCustomers")
+Call FillCombo(Form1.Combo1, _
+  "SELECT CustomerID, CompanyName FROM locCustomers")
+FlagChanged = False
+frMenu.Visible = False
+frCustomer.Visible = True
+Screen.MousePointer = 1
+End Sub
+
+Public Sub PullData(CETable As String, SQLString As String, CEErrorTable As String)
+On Error Resume Next
+Set rda = CreateObject("SSCE.RemoteDataAccess.1.0")
+rda.LocalConnectionString = DataProvider & PathandFile
+rda.InternetURL = URL
+rda.Pull CETable, SQLString, SQLServerConn, TRACKINGON, CEErrorTable
+If rda.ErrorRecords.Count > 0 Then
+  Call ShowErrors(rda.ErrorRecords)
+End If
+Set rda = Nothing
+End Sub
+
+Private Sub CreateDatabase()
+Dim cat As ADOXCE.Catalog
+Set cat = CreateObject("ADOXCE.Catalog.3.1")
+cat.Create DataProvider + PathandFile
+Set cat = Nothing
+End Sub
+
+Private Sub PrepareDatabase()
+Dim rc As Integer
+Dim DatabaseNeeded As Boolean
+FlagChanged = True
+DatabaseNeeded = True
+If CheckDB(PathandFile) = True Then
+  rc = MsgBox("Overwrite " & PathandFile & " ?", vbYesNoCancel, "Database Exists")
+  If rc = vbYes Then
+     FileSystem1.Kill PathandFile
+  Else
+     DatabaseNeeded = False
+  End If
+End If
+If DatabaseNeeded = True Then
+Call CreateDatabase
+End If
+End Sub
+
+Private Sub FillCombo(objControl As Control, SQLString As String)
+Dim rs As ADOCE.Recordset
+Dim cnt As Integer
+Dim strDisp As String
+Dim arb2 As Integer
+Call OpenConn
+objControl.Clear
+Set rs = CreateObject("ADOCE.Recordset.3.1")
+rs.Open SQLString, ado, 0, 1
+cnt = 0
+Do While Not rs.EOF
+   strDisp = ""
+   For arb2 = 1 To rs.Fields.Count - 1
+      strDisp = strDisp & rs.Fields(arb2).Value
+   Next
+   objControl.AddItem strDisp
+   rs.MoveNext
+Loop
+rs.Close
+Set rs = Nothing
+Call CloseConn
+End Sub
+
+Private Sub FillTextBoxes(SQLString As String)
+Dim rs As ADOCE.Recordset
+Dim cnt As Integer
+Dim strDisp As String
+Dim arb2 As Integer
+Call OpenConn
+Set rs = CreateObject("ADOCE.Recordset.3.1")
+rs.Open SQLString, ado, 0, 1
+rs.MoveFirst
+Label1.Caption = rs.Fields(0).Value
+Text1.Text = rs.Fields(1).Value
+Text2.Text = rs.Fields(2).Value
+Text3.Text = rs.Fields(3).Value
+rs.Close
+Set rs = Nothing
+Call CloseConn
+End Sub
+
+Private Function TableInDB(objConnection As ADOCE.Connection, paramTableName As String) As Boolean
+Dim catTable As ADOXCE.Table
+Dim cat As ADOXCE.Catalog
+TableInDB = False
+Set cat = CreateObject("ADOXCE.Catalog.3.1")
+cat.ActiveConnection = objConnection
+For Each catTable In cat.Tables
+  If InStr(1, catTable.Name, paramTableName) <> 0 Then
+    TableInDB = True
+  End If
+Next
+Set catTable = Nothing
+Set cat = Nothing
+End Function
+
+Private Function CheckDB(FilewithPath As String) As Boolean
+If FileSystem1.Dir(FilewithPath) <> "" Then
+  CheckDB = True
+Else
+  CheckDB = False
+End If
+End Function
+Function OpenConn() As Boolean
+OpenConn = False
+Set ado = CreateObject("ADOCE.Connection.3.1")
+ado.Open DataProvider & PathandFile
+If ado.Errors.Count = 0 Then
+  OpenConn = True
+End If
+End Function
+Sub CloseConn()
+On Error Resume Next
+ado.Close
+Set ado = Nothing
+On Error GoTo 0
+End Sub
+
+Sub ShowErrors(ErrColl As SSCEErrors)
+Dim ErrRec As Object  'SSCE.ErrorRecords
+Dim param As Object
+Dim strErr As String
+Dim boolErrFound As Boolean
+strErr = ""
+boolErrFound = False
+For Each ErrRec In ErrColl
+  boolErrFound = True
+  strErr = strErr & "Source: " & ErrRec.Source & vbCrLf
+  strErr = strErr & "Number: " & Hex(ErrRec.Number) & vbCrLf
+  strErr = strErr & "NativeError: " & ErrRec.NativeError & vbCrLf
+  strErr = strErr & "Description: " & ErrRec.Description & vbCrLf
+  For Each param In ErrRec.Params
+     strErr = strErr & "Param" & " = " & param.param & vbCrLf
+  Next param
+  strErr = strErr & vbCrLf
+Next ErrRec
+If boolErrFound = True Then
+  MsgBox strErr, vbOKOnly
+End If
+Set ErrRec = Nothing
+Set param = Nothing
+End Sub

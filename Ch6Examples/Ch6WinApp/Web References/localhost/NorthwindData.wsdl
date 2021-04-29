@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="GetCustomerList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCustomerListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerListString">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCustomerListStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerListStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerOrders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCustomerOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerOrdersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCustomerOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCustomerOrdersResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateCustomerList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCustomerListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetOrderList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetOrderListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrderListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateCustomerListTrans">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCustomerListTransResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </types>
+  <message name="GetCustomerListSoapIn">
+    <part name="parameters" element="s0:GetCustomerList" />
+  </message>
+  <message name="GetCustomerListSoapOut">
+    <part name="parameters" element="s0:GetCustomerListResponse" />
+  </message>
+  <message name="GetCustomerListStringSoapIn">
+    <part name="parameters" element="s0:GetCustomerListString" />
+  </message>
+  <message name="GetCustomerListStringSoapOut">
+    <part name="parameters" element="s0:GetCustomerListStringResponse" />
+  </message>
+  <message name="GetCustomerOrdersSoapIn">
+    <part name="parameters" element="s0:GetCustomerOrders" />
+  </message>
+  <message name="GetCustomerOrdersSoapOut">
+    <part name="parameters" element="s0:GetCustomerOrdersResponse" />
+  </message>
+  <message name="UpdateCustomerOrdersSoapIn">
+    <part name="parameters" element="s0:UpdateCustomerOrders" />
+  </message>
+  <message name="UpdateCustomerOrdersSoapOut">
+    <part name="parameters" element="s0:UpdateCustomerOrdersResponse" />
+  </message>
+  <message name="UpdateCustomerListSoapIn">
+    <part name="parameters" element="s0:UpdateCustomerList" />
+  </message>
+  <message name="UpdateCustomerListSoapOut">
+    <part name="parameters" element="s0:UpdateCustomerListResponse" />
+  </message>
+  <message name="GetOrderListSoapIn">
+    <part name="parameters" element="s0:GetOrderList" />
+  </message>
+  <message name="GetOrderListSoapOut">
+    <part name="parameters" element="s0:GetOrderListResponse" />
+  </message>
+  <message name="UpdateOrderListSoapIn">
+    <part name="parameters" element="s0:UpdateOrderList" />
+  </message>
+  <message name="UpdateOrderListSoapOut">
+    <part name="parameters" element="s0:UpdateOrderListResponse" />
+  </message>
+  <message name="UpdateCustomerListTransSoapIn">
+    <part name="parameters" element="s0:UpdateCustomerListTrans" />
+  </message>
+  <message name="UpdateCustomerListTransSoapOut">
+    <part name="parameters" element="s0:UpdateCustomerListTransResponse" />
+  </message>
+  <message name="GetCustomerListHttpGetIn" />
+  <message name="GetCustomerListHttpGetOut">
+    <part name="Body" element="s0:DataSet" />
+  </message>
+  <message name="GetCustomerListStringHttpGetIn" />
+  <message name="GetCustomerListStringHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetCustomerOrdersHttpGetIn" />
+  <message name="GetCustomerOrdersHttpGetOut">
+    <part name="Body" element="s0:DataSet" />
+  </message>
+  <message name="GetOrderListHttpGetIn" />
+  <message name="GetOrderListHttpGetOut">
+    <part name="Body" element="s0:DataSet" />
+  </message>
+  <message name="GetCustomerListHttpPostIn" />
+  <message name="GetCustomerListHttpPostOut">
+    <part name="Body" element="s0:DataSet" />
+  </message>
+  <message name="GetCustomerListStringHttpPostIn" />
+  <message name="GetCustomerListStringHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetCustomerOrdersHttpPostIn" />
+  <message name="GetCustomerOrdersHttpPostOut">
+    <part name="Body" element="s0:DataSet" />
+  </message>
+  <message name="GetOrderListHttpPostIn" />
+  <message name="GetOrderListHttpPostOut">
+    <part name="Body" element="s0:DataSet" />
+  </message>
+  <portType name="NorthwindDataSoap">
+    <operation name="GetCustomerList">
+      <input message="s0:GetCustomerListSoapIn" />
+      <output message="s0:GetCustomerListSoapOut" />
+    </operation>
+    <operation name="GetCustomerListString">
+      <input message="s0:GetCustomerListStringSoapIn" />
+      <output message="s0:GetCustomerListStringSoapOut" />
+    </operation>
+    <operation name="GetCustomerOrders">
+      <input message="s0:GetCustomerOrdersSoapIn" />
+      <output message="s0:GetCustomerOrdersSoapOut" />
+    </operation>
+    <operation name="UpdateCustomerOrders">
+      <input message="s0:UpdateCustomerOrdersSoapIn" />
+      <output message="s0:UpdateCustomerOrdersSoapOut" />
+    </operation>
+    <operation name="UpdateCustomerList">
+      <input message="s0:UpdateCustomerListSoapIn" />
+      <output message="s0:UpdateCustomerListSoapOut" />
+    </operation>
+    <operation name="GetOrderList">
+      <input message="s0:GetOrderListSoapIn" />
+      <output message="s0:GetOrderListSoapOut" />
+    </operation>
+    <operation name="UpdateOrderList">
+      <input message="s0:UpdateOrderListSoapIn" />
+      <output message="s0:UpdateOrderListSoapOut" />
+    </operation>
+    <operation name="UpdateCustomerListTrans">
+      <input message="s0:UpdateCustomerListTransSoapIn" />
+      <output message="s0:UpdateCustomerListTransSoapOut" />
+    </operation>
+  </portType>
+  <portType name="NorthwindDataHttpGet">
+    <operation name="GetCustomerList">
+      <input message="s0:GetCustomerListHttpGetIn" />
+      <output message="s0:GetCustomerListHttpGetOut" />
+    </operation>
+    <operation name="GetCustomerListString">
+      <input message="s0:GetCustomerListStringHttpGetIn" />
+      <output message="s0:GetCustomerListStringHttpGetOut" />
+    </operation>
+    <operation name="GetCustomerOrders">
+      <input message="s0:GetCustomerOrdersHttpGetIn" />
+      <output message="s0:GetCustomerOrdersHttpGetOut" />
+    </operation>
+    <operation name="GetOrderList">
+      <input message="s0:GetOrderListHttpGetIn" />
+      <output message="s0:GetOrderListHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="NorthwindDataHttpPost">
+    <operation name="GetCustomerList">
+      <input message="s0:GetCustomerListHttpPostIn" />
+      <output message="s0:GetCustomerListHttpPostOut" />
+    </operation>
+    <operation name="GetCustomerListString">
+      <input message="s0:GetCustomerListStringHttpPostIn" />
+      <output message="s0:GetCustomerListStringHttpPostOut" />
+    </operation>
+    <operation name="GetCustomerOrders">
+      <input message="s0:GetCustomerOrdersHttpPostIn" />
+      <output message="s0:GetCustomerOrdersHttpPostOut" />
+    </operation>
+    <operation name="GetOrderList">
+      <input message="s0:GetOrderListHttpPostIn" />
+      <output message="s0:GetOrderListHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="NorthwindDataSoap" type="s0:NorthwindDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="GetCustomerList">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCustomerListString">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerListString" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCustomerOrders">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerOrders" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateCustomerOrders">
+      <soap:operation soapAction="http://tempuri.org/UpdateCustomerOrders" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateCustomerList">
+      <soap:operation soapAction="http://tempuri.org/UpdateCustomerList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetOrderList">
+      <soap:operation soapAction="http://tempuri.org/GetOrderList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateOrderList">
+      <soap:operation soapAction="http://tempuri.org/UpdateOrderList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateCustomerListTrans">
+      <soap:operation soapAction="http://tempuri.org/UpdateCustomerListTrans" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="NorthwindDataHttpGet" type="s0:NorthwindDataHttpGet">
+    <http:binding verb="GET" />
+    <operation name="GetCustomerList">
+      <http:operation location="/GetCustomerList" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCustomerListString">
+      <http:operation location="/GetCustomerListString" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCustomerOrders">
+      <http:operation location="/GetCustomerOrders" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetOrderList">
+      <http:operation location="/GetOrderList" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="NorthwindDataHttpPost" type="s0:NorthwindDataHttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetCustomerList">
+      <http:operation location="/GetCustomerList" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCustomerListString">
+      <http:operation location="/GetCustomerListString" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetCustomerOrders">
+      <http:operation location="/GetCustomerOrders" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetOrderList">
+      <http:operation location="/GetOrderList" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NorthwindData">
+    <port name="NorthwindDataSoap" binding="s0:NorthwindDataSoap">
+      <soap:address location="http://localhost/Ch6WebService/NorthwindData.asmx" />
+    </port>
+    <port name="NorthwindDataHttpGet" binding="s0:NorthwindDataHttpGet">
+      <http:address location="http://localhost/Ch6WebService/NorthwindData.asmx" />
+    </port>
+    <port name="NorthwindDataHttpPost" binding="s0:NorthwindDataHttpPost">
+      <http:address location="http://localhost/Ch6WebService/NorthwindData.asmx" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<theaters>
+	<theater id="1">
+		<name>South Sound Cinemas</name>
+		<hours>5:00 pm - Midnight</hours>
+		<phone>(123) 456-7890</phone>
+		<street>123 S. Sound Blvd.</street>
+		<city>South Sound</city>
+		<state>WA</state>
+		<zip>98765-4321</zip>
+		<directions>from I-5 south, take exit 189B, turn left at 5th, at the next stop light,  turn right onto S. Sound Blvd, we are located on the right-hand side of the street.</directions>
+		<map>map.gif</map>
+	</theater>
+</theaters>
